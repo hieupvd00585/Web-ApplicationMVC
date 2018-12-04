@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApplicationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Exam">
+    <Key>
+      <PropertyRef Name="ExamSubject" />
+    </Key>
+    <Property Name="ExamSubject" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StartTime" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Examdate" Type="datetime" Nullable="false" />
+    <Property Name="Duration" Type="int" Nullable="false" />
+    <Property Name="ClassRoom" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Faculty" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ApplicationModelStoreContainer">
+    <EntitySet Name="Exam" EntityType="Self.Exam" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
